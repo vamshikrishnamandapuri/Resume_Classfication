@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Classification</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #002339; /* Dark Blue background */
+            color: #fff; /* White text color */
+        }
+        h1 {
+            text-align: center;
+            color: #2980b9; /* Navy Blue heading color */
+        }
+        .container {
+            background-color: #f0f0f0; /* Light Gray background */
+            border-radius: 5px;
+            padding: 80px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .job-description-container, .folder-path-container {
+            width: 40%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            width: 100%; 
+            text-align: left;
+            font-weight: bold;
+            color: #2980b9; /* Navy Blue label color */
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff; /* White background for input fields */
+            color: #000; /* Black text color */
+        }
+        /* Increase the width and height of Folder Path input */
+        .folder-path-container input[type="text"] {
+            width: 100%; /* Ensures it spans the full width of the container */
+            height: 80px; /* Increases the height of the text box */
+        }
+        button {
+            background-color:#228B22; /* Navy Blue button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            color: #000000; /* Black text for table cells */ 
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            max-width: 180px;
+            height: auto;
+            margin-right: 15px;
+        }
+        header {
+            background-color: #2980b9; /* Navy blue */
+            padding: 20px 0; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       
+        nav {
+            text-align: center;
+            margin: 0;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color:#3CB371;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 6px;
+        }
+        .image_path img {
+            max-width: 150px;  /* Set a new width for the image */
+            max-height: 150px;  /* Set a new height for the image */
+            margin-top: 5px;  /* Keep the margin */
+            display: block;  /* Changed from flex to block for proper alignment */
+            margin-left: auto;
+            margin-right: auto;  /* Centers the image horizontally */
+
+        }
+        footer {
+            background-color: #2980b9; /* Navy blue */
+            padding: 10px 0;
+            text-align: center;
+            margin-top: auto;
+            color: #fff; /* White text on navy blue */
+        }nav a.active {
+    background-color: #3CB371;
+    color: white;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="C:\Users\andre\Downloads\IIT LABS LOGO_preview_rev_1.png" alt="Your Company Logo" class="logo"> 
+        </div>
+        <nav>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </nav>
+    </header>
+
+    <h1>Resume Classification</h1>
+
+    <!-- Start of container with two parts: Job Description and Folder Path -->
+    <div class="container">
+        <!-- Job Description Section -->
+        <div class="job-description-container">
+            <label for="job-description">Job Description</label>
+            <textarea id="job-description" rows="5"></textarea>
+        </div>
+
+        <!-- Folder Path Section -->
+        <div class="folder-path-container">
+            <label for="folder-path">Folder Path</label>
+            <input type="text" id="folder-path">
+        </div>
+    </div>
+    <div class="image_path">
+        <img src="C:\Users\andre\Downloads\Screenshot_2025-01-17_172431-removebg-preview.png">
+
+    </div>
+
+    <div style="text-align: center;"> 
+        <button onclick="analyzeResumes()">Analyze</button> 
+    </div>
+
+    <div id="results-container">
+        <h2>Results:</h2>
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Experience</th>
+                    <th>Location</th>
+                    <th>Date of Birth</th>
+                    <th>Visa</th>
+                    <th>Government</th>
+                    <th>Certificates</th>
+                    <th>Required skills</th>
+                    <th>Matching Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; © Copyright © 2025 innoSoul Developed and Maintained By IIT LABS</p> 
+    </footer>
+
+    <script>
+        function analyzeResumes() {
+            // Placeholder for resume analysis logic
+            alert('Analyze button clicked!');
+        }
+    </script>
+
+</body>
+</html>
